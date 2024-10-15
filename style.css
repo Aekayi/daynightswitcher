@@ -1,0 +1,339 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #729aba;
+  transition: all 1s ease;
+  background-size: 1000%;
+}
+
+/* Style for the switch */
+.switch {
+  position: relative;
+  width: 400px;
+  height: 150px;
+  border-radius: 150px;
+  background-color: #638fb4;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  overflow: hidden;
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.25),
+    0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.25),
+    inset 0 7px 9px 0 rgba(0, 0, 0, 0.25);
+}
+
+.switcher1,
+.switcher2,
+.switcher3,
+.switcher4 {
+  position: absolute;
+  top: -70px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.switcher2 {
+  top: -58px;
+  left: 0px;
+  width: 270px;
+  height: 270px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.switcher3 {
+  top: -40px;
+  left: 0px;
+  width: 240px;
+  height: 240px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.switcher4 {
+  top: 20px;
+  left: 20px;
+  width: 110px;
+  height: 110px;
+  background-color: #edcb52;
+  box-shadow: inset 0 -5px 4px 0 #c1bc27, inset 3px 4px 4px 0 #feffef;
+}
+
+.switch .cloud1.on {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  bottom: 20px !important;
+  right: 0px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  transition: all 0.7s ease;
+  z-index: 99;
+}
+.switch .cloud1.on::before,
+.switch .cloud1.on::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.switch .cloud1.on::before {
+  top: 0;
+  left: 30px;
+}
+.switch .cloud1.on::after {
+  bottom: -65px;
+  left: -30px;
+}
+
+.switch .cloud3.on {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* bottom: 27px !important;
+  right: 10px !important; */
+  top: 130px;
+  right: 240px;
+  transition: all 0.7s ease;
+  background: linear-gradient(135deg, #b1c8e1 0%, #fff 100%);
+}
+.switch .cloud3.on::before,
+.switch .cloud3.on::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, #b1c8e1 0%, #fff 100%);
+  /* background: linear-gradient(
+    135deg,
+    rgba(183, 207, 235, 0.438) 0%,
+    #ffffff9d 100% */
+  );
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.switch .cloud3.on::before {
+  top: 0px;
+  left: 50px;
+}
+.switch .cloud3.on::after {
+  bottom: -22px;
+  left: 30px;
+}
+
+.switch .cloud2.on {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  bottom: -36px !important;
+  right: 144px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  transition: all 0.7s ease;
+
+  z-index: 99;
+}
+.switch .cloud2.on::before,
+.switch .cloud2.on::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.switch .cloud2.on::before {
+  top: 10px;
+  left: 44px;
+}
+.switch .cloud2.on::after {
+  bottom: -42px;
+  left: -30px;
+}
+
+.switch .cloud4.on {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  bottom: 20px !important;
+  right: 23px !important;
+  transition: all 0.7s ease;
+
+  background: linear-gradient(135deg, #b1c8e1 0%, #fff 100%);
+}
+.switch .cloud4.on::before,
+.switch .cloud4.on::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, #b1c8e1 0%, #fff 100%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.switch .cloud4.on::before {
+  top: 0;
+  left: 30px;
+}
+.switch .cloud4.on::after {
+  bottom: -65px;
+  left: -30px;
+}
+/* moon  */
+.moon.off {
+  position: absolute;
+  background-color: #959bb1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 90px;
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.05),
+    0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 13px rgba(0, 0, 0, 0.25),
+    inset 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.moon.off::before,
+.moon.off::after {
+  content: "";
+  position: absolute;
+  background-color: #959bb1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.05),
+    0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 13px rgba(0, 0, 0, 0.25),
+    inset 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+  right: 60px;
+}
+.moon.off::before {
+  right: -54px;
+  top: -20px;
+}
+
+.moon.off::after {
+  right: -45px;
+  top: 20px;
+}
+/* star */
+.star1,
+.star2,
+.star3,
+.star4,
+.star5,
+.star6 {
+  position: absolute;
+  background-color: #fff;
+  clip-path: polygon(
+    50% 0%,
+    /* Top point */ 61% 35%,
+    /* Top-right outer point */ 98% 35%,
+    /* Right point */ 68% 57%,
+    /* Bottom-right inner point */ 79% 91%,
+    /* Bottom-right outer point */ 50% 70%,
+    /* Bottom point */ 21% 91%,
+    /* Bottom-left outer point */ 32% 57%,
+    /* Bottom-left inner point */ 2% 35%,
+    /* Left point */ 39% 35% /* Top-left outer point */
+  );
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.star1 {
+  width: 25px;
+  height: 25px;
+  top: 70px;
+  left: 30px;
+}
+.star2 {
+  width: 10px;
+  height: 10px;
+  top: 8px;
+  left: 105px;
+}
+.star3 {
+  width: 10px;
+  height: 10px;
+  bottom: 8px;
+  left: 105px;
+}
+.star4 {
+  width: 20px;
+  height: 20px;
+  top: 31px;
+  left: 108px;
+}
+.star5 {
+  width: 20px;
+  height: 20px;
+  top: 41px;
+  left: 160px;
+}
+.star6 {
+  width: 15px;
+  height: 15px;
+  top: 30px;
+  left: 50px;
+}
+
+/* Styles for dark mode */
+.dark-mode .container {
+  background: linear-gradient(to left, #6592b7, #1a1d26);
+  /* background-color: #1a1d26; */
+  transition: all 1s ease;
+}
+
+.dark-mode .switch {
+  background-color: #1a1e28;
+}
+
+.dark-mode .switcher1 {
+  left: 120px;
+}
+.dark-mode .switcher2 {
+  left: 150px;
+}
+.dark-mode .switcher3 {
+  left: 180px;
+}
+.dark-mode .switcher4 {
+  left: 290px;
+  background-color: #c3c8d1;
+  box-shadow: inset 0 -5px 4px 0 #666, inset 3px 4px 4px 0 #feffef;
+}
+.dark-mode .switch .cloud1.on,
+.dark-mode .switch .cloud2.on,
+.dark-mode .switch .cloud3.on,
+.dark-mode .switch .cloud4.on {
+  transform: translateX(600px);
+}
+.dark-mode .switch .cloud1.on::before,
+.dark-mode .switch .cloud1.on::after,
+.dark-mode .switch .cloud2.on::before,
+.dark-mode .switch .cloud2.on::after,
+.dark-mode .switch .cloud3.on::before,
+.dark-mode .switch .cloud3.on::after,
+.dark-mode .switch .cloud4.on::before,
+.dark-mode .switch .cloud4.on::after {
+  transform: translateX(800px);
+}
+.dark-mode .moon.off {
+  display: block;
+  transition: all 0.7s ease;
+}
+.dark-mode .star1.on,
+.dark-mode .star2,
+.dark-mode .star3,
+.dark-mode .star4,
+.dark-mode .star5,
+.dark-mode .star6 {
+  transform: translateX(0px);
+  display: block;
+}
