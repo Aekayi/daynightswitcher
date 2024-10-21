@@ -51,6 +51,7 @@
   height: 15px;
   border-radius: 50%;
   z-index: -1;
+  transform: 0.8s;
 
   box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.05),
     0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 13px rgba(0, 0, 0, 0.25),
@@ -73,6 +74,7 @@
   height: 20px;
   border-radius: 50%;
   z-index: -1;
+  transform: 0.8s;
 
   box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.05),
     0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 13px rgba(0, 0, 0, 0.25),
@@ -95,7 +97,7 @@
   height: 30px;
   border-radius: 50%;
   z-index: -1;
-
+  transform: 0.8s;
   box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.05),
     0 4px 4px rgba(255, 255, 255, 0.4), inset 0 1px 13px rgba(0, 0, 0, 0.25),
     inset 0 4px 7px 0 rgba(0, 0, 0, 0.2);
@@ -119,7 +121,7 @@
   border-radius: 50%;
   /* z-index: 99; */
   box-shadow: inset 0 -5px 4px 0 #595a5a, inset 3px 4px 4px 0 #feffef;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 .switch .cloud1.on {
@@ -167,14 +169,14 @@
 .switch .cloud3.on::after {
   content: "";
   position: absolute;
-  background: linear-gradient(135deg, #b1c8e1 0%, #fff 100%);
+  background: linear-gradient(180deg, #fff 0%, #b1c8e1 30%);
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 .switch .cloud3.on::before {
-  top: -9px;
-  left: 147px;
+  top: -27px !important;
+  left: 123px !important;
   top: 0px;
   left: 50px;
 }
@@ -243,7 +245,39 @@
   bottom: -65px;
   left: -30px;
 }
-
+.switch .cloud5.on {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  bottom: -66px !important;
+  right: 51px !important;
+  transition: all 0.7s ease;
+  z-index: 0;
+  background: #fff;
+}
+.switch .cloud6.on {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  bottom: -15px !important;
+  right: 145px !important;
+  transition: all 0.7s ease;
+  z-index: 0;
+  background: linear-gradient(90deg, #fff 0%, #b1c8e1 100%);
+}
+.switch .cloud7.on {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  bottom: -23px !important;
+  right: 188px !important;
+  transition: all 0.7s ease;
+  z-index: 0;
+  background: linear-gradient(90deg, #fff 0%, #b1c8e1 100%);
+}
 /* star */
 .star1,
 .star2,
@@ -349,7 +383,10 @@
 .dark-mode .switch .cloud1.on,
 .dark-mode .switch .cloud2.on,
 .dark-mode .switch .cloud3.on,
-.dark-mode .switch .cloud4.on {
+.dark-mode .switch .cloud4.on,
+.dark-mode .switch .cloud5.on,
+.dark-mode .switch .cloud6.on,
+.dark-mode .switch .cloud7.on {
   transform: translateX(600px);
 }
 .dark-mode .switch .cloud1.on::before,
